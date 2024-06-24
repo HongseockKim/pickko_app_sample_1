@@ -1,4 +1,4 @@
-import AppMain from "../../view/app/AppMain.jsx";
+import AppMain from "../../project/app/src/view/AppMain.jsx";
 
 export const AppRouter = [
     {

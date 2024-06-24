@@ -1,4 +1,4 @@
-import DashBordMain from "../../view/dashborad/DashBordMain.jsx";
+import DashBordMain from "../../project/dashbord/src/view/DashBordMain.jsx";
 
 export const dashBordRouter = [
     {

@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "monorepo-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,22 +7,29 @@
     "node": ">=18.18.2"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint vite-project --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev:app": "vite --config project/app/vite.config.js --mode development",
+    "build:app": "vite build --config project/app/vite.config.js --mode production",
+    "dev:dashbord": "vite --config project/dashbord/vite.config.js --mode development",
+    "build:project-a": "vite build --config project-a/vite.config.js --mode production",
+    "dev:project-b": "vite --config project-b/vite.config.js --mode development",
+    "build:project-b": "vite build --config project-b/vite.config.js --mode production",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "eventemitter3": "^5.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1"
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.14.1",
+    "vite-plugin-html": "^3.2.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"

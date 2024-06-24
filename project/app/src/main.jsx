@@ -1,0 +1,14 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import '../../../public/reset.css'
+import {RouterProvider} from "react-router-dom";
+import {router} from "../../../router/router.jsx";
+import {Provider} from "react-redux";
+import store from '../store/stores/store.js';
+
+
+ReactDOM.createRoot(document.getElementById('app')).render(
+    <Provider store={store}>
+        <RouterProvider router={router} />
+    </Provider>
+)

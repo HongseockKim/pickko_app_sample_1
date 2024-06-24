@@ -1,5 +1,5 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import App from "../App.jsx";
+import App from "../project/dashbord/src/App.jsx";
 import {dashBordRouter} from "./dashbordRouter/DashboradRouter.jsx";
 import {AppRouter} from "./appRouter/AppRouter.jsx";
 
