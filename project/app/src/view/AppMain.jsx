@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {exampleAction} from "../../store/reducer/exampleSlice.js";
+import {exampleAction} from "../../store/stateSlice/exampleSlice.js";
 
 const AppMain = () => {
     const data = useSelector((state) => state.example.data);

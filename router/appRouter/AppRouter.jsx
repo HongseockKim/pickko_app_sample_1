@@ -1,8 +1,8 @@
-import AppMain from "../../project/app/src/view/AppMain.jsx";
+import AsyncComponent from "../../project/app/component/AsyncComponent.jsx";
 
 export const AppRouter = [
     {
         path: "/app",
-        element: <AppMain/>,
+        element: <AsyncComponent path='/TestPages' onNotFound={() => console.log('Not Found')} />,
     },
 ];

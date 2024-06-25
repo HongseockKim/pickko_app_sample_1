@@ -17,5 +17,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'react/prop-types': 'off', // prop-types 검사 비활성화
   },
 }

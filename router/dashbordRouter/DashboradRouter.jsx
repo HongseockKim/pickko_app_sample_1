@@ -1,8 +1,8 @@
-import DashBordMain from "../../project/dashbord/src/view/DashBordMain.jsx";
+import AsyncComponent from "../../project/app/component/AsyncComponent.jsx";
 
 export const dashBordRouter = [
     {
         path: "/dashbord",
-        element: <DashBordMain/>,
+        element: <AsyncComponent path='/Dashboard' onNotFound={() => console.log('Not Found')} />,
     },
 ];
