@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    data: 'qweqwe'
+    data: '테스트데이터'
 };
 
 const exampleSlice = createSlice({
