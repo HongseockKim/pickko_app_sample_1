@@ -7,7 +7,7 @@
     "node": ">=18.18.2"
   },
   "scripts": {
-    "dev:app": "vite --config project/app/vite.config.js --mode development",
+    "dev:app": "vite --config src/app/vite.config.js --mode development",
     "build:app": "vite build --config project/app/vite.config.js --mode production",
     "dev:dashbord": "vite --config project/dashbord/vite.config.js --mode development",
     "build:project-a": "vite build --config project-a/vite.config.js --mode production",
