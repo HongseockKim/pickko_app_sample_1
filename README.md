@@ -64,3 +64,81 @@ Currently, two official plugins are available:
 4. **의존성 관리**: MobX의 마법 같은 상태 관리로 인해 상태 흐름이 명확하지 않을 수 있습니다.
 
 MobX는 상태 관리가 직관적이고 간단하다는 점에서 많은 개발자들에게 사랑받고 있습니다. 하지만 프로젝트의 복잡도와 팀의 경험에 따라 선택하는 것이 좋습니다.
+
+
+## pickko_app_sample_1
+
+
+├── README.md<br />
+├── package-lock.json<br />
+├── package.json<br />
+├── public<br />
+│ &nbsp; ├── reset.css<br />
+│ &nbsp; └── vite.svg<br />
+├── src<br />
+│ &nbsp; ├── app<br />
+│ &nbsp; │ &nbsp; ├── index.html<br />
+│ &nbsp; │ &nbsp; ├── router<br />
+│ &nbsp; │ &nbsp; ├── src<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── App.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── main.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── pages<br />
+│ &nbsp; │ &nbsp; │ &nbsp; &nbsp; &nbsp; ├── Main.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; &nbsp; &nbsp; ├── TestPages.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; &nbsp; &nbsp; └── test<br />
+│ &nbsp; │ &nbsp; │ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └── TestPages.jsx<br />
+│ &nbsp; │ &nbsp; └── vite.config.js<br />
+│ &nbsp; ├── common<br />
+│ &nbsp; │ &nbsp; ├── api<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── exampleApi.js<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── exampleApiRequest.js<br />
+│ &nbsp; │ &nbsp; ├── axios<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── index.js<br />
+│ &nbsp; │ &nbsp; ├── component<br />
+│ &nbsp; │ &nbsp; ├── error<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── ErrorRender.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── NotFound.jsx<br />
+│ &nbsp; │ &nbsp; ├── loadingTemplate<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── Loading.jsx<br />
+│ &nbsp; │ &nbsp; ├── projectConfig<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── projectConfig.js<br />
+│ &nbsp; │ &nbsp; ├── store<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── actions<br />
+│ &nbsp; │ &nbsp; │ &nbsp; │ &nbsp; └── ExampleHook.jsx<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── config<br />
+│ &nbsp; │ &nbsp; │ &nbsp; │ &nbsp; └── config.js<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── stateSlice<br />
+│ &nbsp; │ &nbsp; │ &nbsp; │ &nbsp; ├── exampleSlice.js<br />
+│ &nbsp; │ &nbsp; │ &nbsp; │ &nbsp; └── systemSlice.js<br />
+│ &nbsp; │ &nbsp; │ &nbsp; ├── stores<br />
+│ &nbsp; │ &nbsp; │ &nbsp; │ &nbsp; └── store.js<br />
+│ &nbsp; │ &nbsp; │ &nbsp; └── transforms<br />
+│ &nbsp; │ &nbsp; │ &nbsp; &nbsp; &nbsp; └── transform.js<br />
+│ &nbsp; │ &nbsp; └── util<br />
+│ &nbsp; │ &nbsp; &nbsp; &nbsp; ├── routing<br />
+│ &nbsp; │ &nbsp; &nbsp; &nbsp; │ &nbsp; ├── AsyncComponent.jsx<br />
+│ &nbsp; │ &nbsp; &nbsp; &nbsp; │ &nbsp; ├── DynamicRoutes.jsx<br />
+│ &nbsp; │ &nbsp; &nbsp; &nbsp; │ &nbsp; └── Routers.jsx<br />
+│ &nbsp; │ &nbsp; &nbsp; &nbsp; └── util.js<br />
+│ &nbsp; └── dashbord<br />
+│ &nbsp; &nbsp; &nbsp; ├── index.html<br />
+│ &nbsp; &nbsp; &nbsp; ├── router<br />
+│ &nbsp; &nbsp; &nbsp; ├── src<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; ├── App.jsx<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; ├── main.jsx<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; └── pages<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; &nbsp; &nbsp; ├── Main.jsx<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; &nbsp; &nbsp; ├── TestPages.jsx<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; &nbsp; &nbsp; └── test<br />
+│ &nbsp; &nbsp; &nbsp; │ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └── TestPages.jsx<br />
+│ &nbsp; &nbsp; &nbsp; └── vite.config.js<br />
+├── style<br />
+│ &nbsp; ├── AppStyled.jsx<br />
+│ &nbsp; ├── DashbordStyled.jsx<br />
+│ &nbsp; └── LoadingStyled.jsx<br />
+└── yarn.lock</p>
+
+
+
+
+
