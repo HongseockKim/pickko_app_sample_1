@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {persistStore} from 'redux-persist';
-import {persistedExampleReducer} from "../config/config.js";
+import {persistedExampleReducer, persistedSystemReducer} from "../config/config.js";
 
 const customMiddleware = store => next => action => {
     console.log('디스패치 중:', action);
@@ -12,6 +12,7 @@ const customMiddleware = store => next => action => {
 const store = configureStore({
     reducer: {
         example: persistedExampleReducer,
+        system: persistedSystemReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({

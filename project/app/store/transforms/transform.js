@@ -18,6 +18,7 @@ const exampleTransform = createTransform(
     // 작동할 리듀서 키
     { whitelist: [
         'example',
+            'system'
         ] }
 );
 

@@ -1,30 +1,32 @@
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {exampleAction} from "../../../store/stateSlice/exampleSlice.js";
-import {useQuery} from "react-query";
 import {useEffect} from "react";
-import exampleApiRequest from "../../../api/exampleApiRequest.js";
+import ExampleHook from "../../../store/actions/ExampleHook.jsx";
+import Loading from "../../loadingTemplate/Loading.jsx";
 
 const TestPages = () => {
-    const dataTest = useSelector((state) => state.example.data);
     const dispatch = useDispatch();
-    const { data } = useQuery('exampleApi', exampleApiRequest.exampleApiRequest);
+    const { dataTest, isLoading, error } = ExampleHook();
 
     const handleClick = () => {
         dispatch(exampleAction('데이터 체인지'));
-    }
+    };
 
     useEffect(() => {
-        console.log("=>(TestPages.jsx:17) data", data);
-    }, [data]);
+        console.log("=>(TestPages.jsx:17) data", dataTest);
+    }, [dataTest]);
 
-    return(
-        <div >
-            <div >{dataTest}</div >
-            <div >
-                <button type='button' onClick={handleClick} >데이터 체인지</button >
-            </div >
-        </div >
-    )
-}
+    if (isLoading) return <Loading />;
+    if (error) return <div>Error: {error.message}</div>;
+
+    return (
+        <div>
+            <div>{dataTest.length}</div>
+            <div>
+                <button type='button' onClick={handleClick}>데이터 체인지</button>
+            </div>
+        </div>
+    );
+};
 
 export default TestPages;

@@ -6,6 +6,7 @@ import {persistor, store} from '../../app/store/stores/store.js';
 import Routers from "../util/Routers.jsx";
 import AppStyled from "../../../style/AppStyled.jsx";
 import {QueryClient, QueryClientProvider} from "react-query";
+import {ReactQueryDevtools} from "react-query/devtools";
 
 const queryClient = new QueryClient();
 
@@ -18,5 +19,6 @@ ReactDOM.createRoot(document.getElementById('app')).render(
                 </AppStyled>
             </PersistGate>
         </Provider>
+        <ReactQueryDevtools/>
     </QueryClientProvider>
 );
