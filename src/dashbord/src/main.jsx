@@ -6,7 +6,6 @@ import {persistor, store} from '../../common/store/stores/store.js';
 import Routers from "../../common/util/routing/Routers.jsx";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
-import DashbordStyled from "../../../style/DashbordStyled.jsx";
 
 
 const originalConsoleLog = console.log;
@@ -51,9 +50,7 @@ ReactDOM.createRoot(document.getElementById('dashbord')).render(
     <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <DashbordStyled>
                     <Routers/>
-                </DashbordStyled>
             </PersistGate>
         </Provider>
         <ReactQueryDevtools/>

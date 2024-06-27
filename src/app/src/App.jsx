@@ -1,11 +1,12 @@
 import {Outlet} from "react-router-dom";
+import AppStyled from "../../../style/AppStyled.jsx";
 
 function App() {
   return (
-      <div>
+      <AppStyled>
         <p>여기에 네브바 가 올수도 있음</p>
         <Outlet/>
-      </div>
+      </AppStyled>
   )
 }
 
