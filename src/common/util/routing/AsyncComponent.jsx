@@ -18,8 +18,8 @@ const AsyncComponent = ({ path }) => {
             try {
                 let module;
                 module = await import(/* @vite-ignore */ `../../../${import.meta.env.VITE_APP_TYPE}/src/pages${path}.jsx`);
+                console.log(module)
                 if (!cleanedUp) {
-                    console.log("=>(AsyncComponent.jsx:24) module", module);
                     setComponent(() => module.default);
                 }
             } catch (err) {

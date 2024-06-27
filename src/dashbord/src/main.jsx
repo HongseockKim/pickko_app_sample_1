@@ -10,6 +10,10 @@ import DashbordStyled from "../../../style/DashbordStyled.jsx";
 
 
 const originalConsoleLog = console.log;
+console.log('@@@@@@@@@@@@@');
+console.log('대쉬보드')
+console.log('@@@@@@@@@@@@@');
+
 
 console.log = function() {
     const stack = new Error().stack.split('\n');

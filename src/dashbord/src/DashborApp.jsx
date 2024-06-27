@@ -1,7 +1,7 @@
 import {Outlet} from "react-router-dom";
 import Navigator from "../../common/component/Navigator.jsx";
 
-function DashbordApp() {
+function DashborApp() {
   return (
       <div>
         <Navigator/>
@@ -11,4 +11,4 @@ function DashbordApp() {
   )
 }
 
-export default DashbordApp
+export default DashborApp

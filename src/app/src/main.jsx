@@ -11,6 +11,11 @@ import {ReactQueryDevtools} from "react-query/devtools";
 
 const originalConsoleLog = console.log;
 
+
+console.log('@@@@@@@@@@@@@');
+console.log('앱')
+console.log('@@@@@@@@@@@@@');
+
 console.log = function() {
     const stack = new Error().stack.split('\n');
     let caller = stack.find(line => line.includes('webpack-internal:'));
