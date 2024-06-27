@@ -4,9 +4,9 @@ import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistor, store} from '../../common/store/stores/store.js';
 import Routers from "../../common/util/routing/Routers.jsx";
-import AppStyled from "../../../style/AppStyled.jsx";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
+import DashbordStyled from "../../../style/DashbordStyled.jsx";
 
 
 const originalConsoleLog = console.log;
@@ -43,13 +43,13 @@ console.log = function() {
 const queryClient = new QueryClient();
 
 
-ReactDOM.createRoot(document.getElementById('app')).render(
+ReactDOM.createRoot(document.getElementById('dashbord')).render(
     <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <AppStyled>
+                <DashbordStyled>
                     <Routers/>
-                </AppStyled>
+                </DashbordStyled>
             </PersistGate>
         </Provider>
         <ReactQueryDevtools/>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const DashbordStyled = styled.div`
-    background: red;
+    background: #ccc;
 `;
 
 export default DashbordStyled;

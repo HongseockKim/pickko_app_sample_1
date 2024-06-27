@@ -8,7 +8,7 @@ const appRoutes = [
     },
     {
         path: '*',
-        element: <DynamicRoutes appType="app" />,
+        element: <DynamicRoutes />,
     },
 ];
 

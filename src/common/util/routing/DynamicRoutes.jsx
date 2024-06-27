@@ -1,7 +1,7 @@
 import {Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 import AsyncComponent from "./AsyncComponent.jsx";
 
-const DynamicRoutes = ({appType}) => {
+const DynamicRoutes = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -13,7 +13,6 @@ const DynamicRoutes = ({appType}) => {
               <AsyncComponent
                   path={location.pathname}
                   onNotFound={() => navigate('/404')}
-                  appType={appType}
               />
           }
       />

@@ -4,11 +4,11 @@ import DynamicRoutes from "../../common/util/routing/DynamicRoutes.jsx";
 const dashboardRoutes = [
     {
         index: true,
-        element: <Navigate to="/dashboard" replace />
+        element: <Navigate to="/dashbordMain" replace />
     },
     {
         path: '*',
-        element: <DynamicRoutes appType="dashboard" />,
+        element: <DynamicRoutes />,
     },
 ];
 
