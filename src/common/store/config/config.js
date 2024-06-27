@@ -1,30 +1,31 @@
-import {exampleTransform} from "../transforms/transform.js";
-import {persistReducer} from "redux-persist";
-import exampleSlice from "../stateSlice/exampleSlice.js";
 import {customStorage} from "../../util/util.js";
-import systemSlice from "../stateSlice/systemSlice.js";
+import {createTransform} from 'redux-persist';
 
-
-const examplePersistConfig = {
-    key: 'example', // 내가 스토리지에 저장할 key 값
-    storage:customStorage,
-    transforms: [exampleTransform],
+// 저장할 때 호출되는 함수
+const saveTransform = (inboundState, key) => {
+    console.log(`Saving state for key: ${key}`);
+    return inboundState;
 };
 
-const systemPersistConfig = {
-    key: 'system', // 내가 스토리지에 저장할 key 값
-    storage:customStorage,
-    transforms: [exampleTransform],
+// 복원할 때 호출되는 함수
+const loadTransform = (outboundState, key) => {
+    console.log(`Loading state for key: ${key}`);
+    return outboundState;
 };
 
+const exampleTransform = createTransform(
+    saveTransform,
+    loadTransform,
+    // 작동할 리듀서 키
+    { whitelist: [
+            'example',
+            'system'
+        ] }
+);
 
 
-const persistedExampleReducer = persistReducer(examplePersistConfig, exampleSlice);
-const persistedSystemReducer = persistReducer(systemPersistConfig, systemSlice);
-
-
-
-export {
-    persistedExampleReducer,
-    persistedSystemReducer
-}
+export const createPersistConfig = (key) => ({
+    key,
+    storage: customStorage,
+    transforms: [exampleTransform],
+});

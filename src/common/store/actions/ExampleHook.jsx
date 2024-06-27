@@ -15,7 +15,6 @@ const ExampleHook = () => {
         console.log("error", error);
         console.log("isLoading", isLoading);
 
-        // dispatch(setLoading(isLoading));
         if (!isLoading) {
             dispatch(setExampleListData(data));
         }

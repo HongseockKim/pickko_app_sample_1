@@ -1,9 +1,11 @@
 import {Outlet} from "react-router-dom";
+import Navigator from "../../common/component/Navigator.jsx";
 
 function App() {
   return (
       <div>
-        <p>여기에 네브바 가 올수도 있음</p>
+        <Navigator/>
+          qeweqwe
         <Outlet/>
       </div>
   )

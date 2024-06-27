@@ -11,7 +11,8 @@ const AsyncComponent = ({ path, appType }) => {
 
     useEffect(() => {
         let cleanedUp = false;
-        console.log("path", path);        console.log("appType", appType);
+        console.log("path", path);
+        console.log("appType", appType);
 
         const importComponent = async () => {
             try {

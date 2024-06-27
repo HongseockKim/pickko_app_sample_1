@@ -7,7 +7,7 @@ import {dirname} from 'path'
 
 export default defineConfig(({ mode }) => {
     // 현재 작업 디렉토리를 project/app으로 설정
-    const env = loadEnv(mode, process.cwd() + '/src/app');
+    const env = loadEnv(mode, process.cwd() + '/src/dashbord');
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
 
@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
           }
         },
         server: {
-            port: 3000,
+            port: 3001,
             open: true,
         }
     };

@@ -10,14 +10,14 @@ import dashboardRoutes from "../../../dashbord/router/router.jsx";
 
 const router = createBrowserRouter([
     {
-        path: '/',
-        element: <App />,
-        children: appRoutes
-    },
-    {
         path: '/dashboard',
         element: <Dashboard />,
         children: dashboardRoutes
+    },
+    {
+        path: '/',
+        element: <App />,
+        children: appRoutes
     },
     {
         path: '/error',
