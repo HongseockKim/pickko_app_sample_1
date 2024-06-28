@@ -3,9 +3,10 @@ import '../../../public/reset.css';
 import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistor, store} from '../../common/store/stores/store.js';
-import Routers from "../../common/util/routing/Routers.jsx";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
+import {RouterProvider} from "react-router-dom";
+import dashboardRoutes from "../router/router.jsx";
 
 
 const originalConsoleLog = console.log;
@@ -50,7 +51,7 @@ ReactDOM.createRoot(document.getElementById('dashbord')).render(
     <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                    <Routers/>
+                    <RouterProvider router={dashboardRoutes} />
             </PersistGate>
         </Provider>
         <ReactQueryDevtools/>

@@ -8,13 +8,16 @@
   },
   "scripts": {
     "dev:app": "vite --config src/app/vite.config.js --mode development",
+    "dev-build:app": "vite build --config src/app/vite.config.js --mode development",
     "build:app": "vite build --config project/app/vite.config.js --mode production",
     "dev:dashbord": "vite --config src/dashbord/vite.config.js --mode development",
     "build:dashbord": "vite build --config src/dashbord/vite.config.js --mode production",
+    "dev:dashboard": "vite --config src/dashboard/vite.config.js --mode development",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@suspensive/react": "^2.3.0",
     "@tanstack/react-query": "^5.48.0",
     "axios": "^1.7.2",
     "eventemitter3": "^5.0.1",
