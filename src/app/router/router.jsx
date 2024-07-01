@@ -3,6 +3,7 @@ import DynamicRoutes from "../../common/util/routing/DynamicRoutes.jsx";
 import App from "../src/App.jsx";
 import ErrorRender from "../../common/error/ErrorRender.jsx";
 import NotFound from "../../common/error/NotFound.jsx";
+import StaticRoute from "../src/pages/StaticRoute.jsx";
 
 const appRoutes = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const appRoutes = createBrowserRouter([
             {
                 index: true,
                 element: <Navigate to="/main" replace />
+            },
+            {
+                path: '/staticRoute',
+                element: <StaticRoute />,
             },
             {
                 path: '*',
